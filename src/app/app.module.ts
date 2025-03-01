@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-// import { SlickCarouselModule } from 'ngx-slick-carousel';
-import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
-// import { ReactiveFormsModule } from '@angular/forms';
+import {  HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,7 +16,7 @@ import { NextGenCoursesComponent } from './components/next-gen-courses/next-gen-
 import { PopularCoursesComponent } from './components/popular-courses/popular-courses.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { TopTechCoursesComponent } from './components/top-tech-courses/top-tech-courses.component';
-import { FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InternshipComponent } from './components/internship/internship.component';
 import { StackCoursesComponent } from './components/stack-courses/stack-courses.component';
 import { InternshipBookingComponent } from './components/internship-booking/internship-booking.component';
@@ -28,8 +25,7 @@ import { JobsComponent } from './components/jobs/jobs.component';
 import { CareerComponent } from './components/career/career.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 import { RefundPolicyComponent } from './components/refund-policy/refund-policy.component';
-// import { SlickCarouselModule } from 'ngx-slick-carousel';
-// declare module 'ngx-slick-carousel';
+
 
 @NgModule({
   declarations: [

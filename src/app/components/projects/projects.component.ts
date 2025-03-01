@@ -28,7 +28,7 @@ export class ProjectsComponent implements OnInit{
   placementTraining:any;
   placementChange:any;
   projects_titles:any[]=['Internships' , 'Placement training' , 'Projects' , 'Mentoring' , 'Career Development training' ];
-  allPlacement:any[]=["../../assets/M.kumarasaamy.jpg","../../assets/M.kumarasaamy2.jpg","../../assets/JennysImg.jpg","../../assets/M.kumarasaamy4.jpg","../../assets/Jennysimg2.jpg","../../assets/M.kumarasaamy6.jpg"]
+  allPlacement:any[]=["./assets/M.kumarasaamy.jpg","./assets/M.kumarasaamy2.jpg","./assets/JennysImg.jpg","./assets/M.kumarasaamy4.jpg","./assets/Jennysimg2.jpg","./assets/M.kumarasaamy6.jpg"]
   @ViewChild('project-parallex') el!:ElementRef;
   @ViewChild('placementcard') el1!:ElementRef;
 

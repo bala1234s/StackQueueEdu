@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class EnquiryService {
   // private api = "http://localhost:3001/postEnquiry";
-  private api = "https://l8b125f3-3001.inc1.devtunnels.ms/postEnquiry";
+  private api = "https://stack-queue-v1-0.vercel.app/postEnquiry";
   formData : FormData = new FormData();
 
 

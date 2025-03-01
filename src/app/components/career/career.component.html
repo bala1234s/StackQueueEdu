@@ -29,20 +29,16 @@
             <div class="photos-container">
                 <button class="nav-button" (click)="scrollLeft()">&lt;</button>
                 <div class="photos">
-                    <img
-                        *ngFor="let photo of photos"
-                        [src]="photo.src"
-                        [alt]="photo.alt"
-                        (click)="openModal(photo)"
-                    />
+                    
+                    <img *ngFor="let photo of photos" [src]="photo.src" (click)="openModal(photo)" (keydown)="handleKeyDown($event, photo)" alt="img"/>
                 </div>
                 <button class="nav-button" (click)="scrollRight()">&gt;</button>
             </div>
 
             <!-- Modal Structure -->
-            <div class="modal" *ngIf="isModalOpen" (click)="closeModal()">
-                <span class="close" (click)="closeModal($event)">&times;</span>
-                <img class="modal-content" [src]="modalImage?.src" />
+            <div class="modal" *ngIf="isModalOpen" (click)="closeModal()" (keydown)="handleKeyDown($event, modalImage)">
+                <span class="close" (click)="closeModal($event)" (keydown)="handleKeyDown($event, modalImage)">&times;</span>
+                <img class="modal-content" [src]="modalImage?.src" alt="img"/>
                 <div id="caption">{{ modalImage?.alt }}</div>
             </div>
         </section>

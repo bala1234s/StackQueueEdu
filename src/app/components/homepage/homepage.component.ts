@@ -24,9 +24,9 @@ export class HomepageComponent {
 
   // Slideshow using ngx-slick-carousel
   slides = [
-    { img: "../../../assets/Angular logo.png"},
-    { img: "../../../assets/thinking_image.png"},
-    { img: "../../../assets/software-testing-removebg-preview.png"}
+    { img: "./assets/Angular logo.png"},
+    { img: "./assets/thinking_image.png"},
+    { img: "./assets/software-testing-removebg-preview.png"}
   ];
 
   slideConfig = {

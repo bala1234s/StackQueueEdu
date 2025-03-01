@@ -9,7 +9,7 @@ export class AllInternshipsService {
   constructor(private http: HttpClient) { }
 
   // private api = 'http://localhost:3001/';
-  private api = 'https://l8b125f3-3001.inc1.devtunnels.ms'
+  private api = 'https://stack-queue-v1-0.vercel.app'
   getAllInternships() {
     return this.http.get(`${this.api}/internships`);
   }

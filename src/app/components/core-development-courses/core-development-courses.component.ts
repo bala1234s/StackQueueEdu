@@ -13,7 +13,7 @@ export class CoreDevelopmentCoursesComponent implements OnInit {
   loader: boolean = true;
   skeletons: number[] = Array(6).fill(0); // Add this line
 
-  constructor(private courses: AllCoursesService, private route: Router) {
+  constructor(private readonly courses: AllCoursesService, private readonly route: Router) {
     courses.getAllCourse().subscribe((get) => {
       
       this.getCourses = get[0].career_based_courses;

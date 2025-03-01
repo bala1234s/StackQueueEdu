@@ -1,11 +1,11 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-career',
   templateUrl: './career.component.html',
   styleUrls: ['./career.component.css']
 })
-export class CareerComponent implements OnInit, OnDestroy {
+export class CareerComponent {
   photos = [
     { src: 'https://live.staticflickr.com/65535/54248318230_2a475aa538_z.jpg', alt: 'Gallery Image 2' },
     { src: 'https://live.staticflickr.com/65535/53616255838_fbf6984ffe_z.jpg', alt: 'Gallery Image 3' },
@@ -18,18 +18,14 @@ export class CareerComponent implements OnInit, OnDestroy {
 
   isModalOpen = false;
   modalImage: { src: string; alt: string } | null = null;
-  private intervalId: any;
+ 
 
-  ngOnInit(): void {
-    // this.intervalId = setInterval(() => {
-    //   this.photos.push(this.photos.shift()!);
-    // }, 2000);
-  }
 
-  ngOnDestroy(): void {
-    // if (this.intervalId) {
-    //   clearInterval(this.intervalId);
-    // }
+
+ handleKeyDown(event: KeyboardEvent, photo: any): void {
+    if (event.key === 'Enter' || event.key === ' ') {
+      this.openModal(photo);
+    }
   }
 
   openModal(photo: { src: string; alt: string }): void {

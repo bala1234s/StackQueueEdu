@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class ContactUsService {
 
-  private api = "http://localhost:3001/contactUs";
+  private api = "https://stack-queue-v1-0.vercel.app/contactUs";
 
   constructor(private http : HttpClient) { }
   postContact(data:any) {

@@ -31,25 +31,18 @@
     clip-path: polygon(100% 98%, 100% 98%, 1% 99%, 10% 89%, 99% 73%);
 }
 
-/* .about-heading h1{
-  background-color: rebeccapurple;
-  clip-path: polygon(0% 99%, 33% 93%, 67% 89%, 100% 89%);
-} */
+
 .about-splash img {
     width: 200px;
     height: 200px;
     mix-blend-mode: exclusion;
 }
 
-.about-component {
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-}
+
 
 .about-content {
     height: 70vh;
-    /* overflow-y: scroll; */
+  
 }
 
 .about-content::-webkit-scrollbar {
@@ -59,8 +52,7 @@
 
 .about-gif {
     position: sticky;
-    /* margin-top: 2rem; */
-    /* top: 20%; */
+
     
     right: 0;
 }
@@ -218,15 +210,11 @@
 
 .pie_chart img {
     height: 100px;
-    /* Adjust the size */
-    /* width: 50px; */
+   
     animation: rotate 3s infinite linear;
     /* Added animation for 360 degree rotation */
 }
-/* .vision-gif .settings-two {
-    position: absolute;
-    top: 10%;
-} */
+
 
 @keyframes rotate {
     0% {
@@ -246,7 +234,7 @@
     gap: 4rem;
     padding: 2rem;
     position: relative;
-    /* flex-wrap: wrap; */
+ 
 }
 
 .vision-content {
@@ -262,14 +250,11 @@
     margin-bottom: 20px;
 
 }
-.vision-image img {
-    height: 100px;
-    /* width: 3px; */
-}
+
 
 .vision-image img {
     height: 300px;
-    /* Main image size */
+   
     width: 300px;
     border-radius: 10px;
 }
@@ -706,7 +691,7 @@
     .about-heading{
         flex-direction: column;
         align-items: center;
-        /* margin-top: 8rem; */
+       
         
     }
     .about-para{
@@ -722,7 +707,7 @@
     .communication-training,
     .personality-training {
         position: static;
-        /* width: 00px; */
+  
         width: 90%;
         margin-bottom: 1rem;
         height:auto ;
@@ -768,10 +753,7 @@
         overflow-y: visible;
     }
 
-    /* .about-gif {
-        position: static;
-        margin-top: 2rem;
-    } */
+   
 
     .vision-component {
         flex-direction: column;
@@ -793,19 +775,7 @@
     }
 
     
-    .global-certified,
-    .resume-crafting,
-    .module-tasks,
-    .support,
-    .mock-interview,
-    .language-training,
-    .communication-training,
-    .personality-training {
-        /* position: static;
-        width: 300px; */
-        /* width: 90%; */
-        /* margin-bottom: 1rem; */
-    }
+  
 
     .flow-chart {
         height: auto;
@@ -850,15 +820,12 @@
     }
 
     .personality-development div{
-        /* display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; */
+      
         text-align: center;
     }
     .vision-component .pie_chart{
         position: absolute;
-        /* right: 0; */
+    
         margin-left: 10rem;
     }
     
@@ -890,17 +857,7 @@
         width: 150px;
     }
 
-    .global-certified,
-    .resume-crafting,
-    .module-tasks,
-    .support,
-    .mock-interview,
-    .language-training,
-    .communication-training,
-    .personality-training {
-        /* width: 100%; */
-        /* width: 300px; */
-    }
+  
 
     .solution-card {
         width: 100%;

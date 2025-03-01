@@ -8,7 +8,7 @@ import { throwError } from 'rxjs';
 })
 export class JobProfileService {
 
-  private api = 'https://l8b125f3-3001.inc1.devtunnels.ms'
+  private api = 'https://stack-queue-v1-0.vercel.app'
 
   constructor(private http: HttpClient) { }
   

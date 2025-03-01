@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ContactUsService } from 'src/app/services/contact-us.service';
-declare var Swal: any;
+declare const Swal: any;
 
 @Component({
   selector: 'app-contactus',
@@ -12,7 +12,7 @@ export class ContactusComponent {
   brownbox: any;
   isLoading: boolean = false;
 
-  constructor(private form: FormBuilder , private contact : ContactUsService){
+  constructor(private readonly form: FormBuilder , private readonly contact : ContactUsService){
     this.brownbox=document.getElementsByClassName("test")[0];
     
 
