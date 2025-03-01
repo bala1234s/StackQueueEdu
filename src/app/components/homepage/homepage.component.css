@@ -1,0 +1,805 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+        /* IE and Edge */
+        
+}
+
+
+.splash-screen {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    flex-wrap: wrap;
+    scrollbar-width: none;
+        overflow: hidden;
+    width: 100%;
+}
+
+.splash-content {
+    margin-top: 2%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#elicit {
+    font-weight: bolder;
+    font-size: 2.2rem;
+    height: 55px;
+}
+
+.dots-effects {
+    position: absolute;
+    bottom: 12%;
+    transform: rotate(45deg);
+    right: 0;
+}
+
+.dots-effects img {
+    width: 80px;
+    height: 120px;
+}
+
+.bubble {
+    position: absolute;
+    top: -10%;
+    left: -15%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(173, 216, 230, 0.8));
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.lifetime-access h2 .animatetext {
+    color: green;
+}
+
+.splash-image {
+    position: relative;
+}
+
+.start-course {
+    background-color: rgb(118, 63, 199);
+    width: 350px;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: 0px 0.5px 1px 1px black,
+        1px 2px 2px 2px black;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+}
+
+.book-splash {
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    animation: shakebook 7s ease-in-out infinite;
+}
+
+.target-splash {
+    position: absolute;
+    right: 0;
+    top: 25%;
+}
+
+.cloud-splash {
+    position: absolute;
+    right: -2.8%;
+    top: 1.5%;
+}
+
+.splash-heading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes shakebook {
+    0% {
+        transform: rotate(30deg);
+    }
+
+    50% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(30deg);
+    }
+}
+
+.book-splash .book {
+    width: 7dvw;
+    height: 15dvh;
+}
+
+.target-splash .book {
+    width: 8dvw;
+    height: 15dvh;
+}
+
+.cloud-splash .book {
+    width: 15dvw;
+    height: 19dvh;
+}
+
+.splash-image img {
+    width: 45dvw;
+    height: 95cqh;
+}
+
+.learners-connect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#connect {
+    color: green;
+}
+
+.connect-images {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.connect-images :nth-child(1) img {
+    width: 150px;
+    height: 90px;
+}
+
+.connect-images :nth-child(2) img {
+    width: 120px;
+    height: 120px;
+}
+
+.connect-images :nth-child(3) img {
+    width: 120px;
+    height: 120px;
+}
+
+.connect-images :nth-child(4) img {
+    width: 140px;
+    height: 120px;
+}
+
+.connect-images :nth-child(5) img {
+    width: 130px;
+    height: 130px;
+}
+
+.connect-images :nth-child(6) img {
+    width: 140px;
+    height: 130px;
+}
+
+.vision-mission {
+    margin-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #E6E6FA;
+    overflow: hidden;
+}
+
+.vision-mission .about {
+    padding: 0 10rem;
+    text-align: justify;
+}
+
+.mission-icon {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.mission-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.content {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+:is(.vision, .mission) {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10%;
+
+    text-align: justify;
+    width: 100%;
+}
+
+:is(.vision, .mission) p {
+    font-size: 0.9rem;
+}
+
+.courses-offered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    overflow: hidden;
+    /* width: 100%; */
+}
+
+.course-heading span {
+    position: relative;
+    color: green;
+}
+
+.course-heading span::before {
+    content: '';
+    position: absolute;
+    clip-path: polygon(0 90%, 100% 80%, 100% 100%, 0% 100%);
+    background: rgb(118, 63, 199);
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.sq-topcourses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sq-topcourses h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.sq-topcourses span {
+    color: rgb(118, 63, 199);
+    font-weight: 900;
+}
+
+.course-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+    align-items: center;
+    /* padding: 1rem 2rem;  */
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.rated-course {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.rated-course a {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.rated-course a:hover {
+    text-decoration: underline;
+}
+
+.rated-course .course-show {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    background-color: none;
+    flex-wrap: wrap;
+}
+
+.rated-course .course-list {
+    border-radius: 15px;
+    background: #e0e0e0;
+    box-shadow: inset 8px 8px 16px #9d9d9d,
+        inset -8px -8px 16px #ffffff;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    width: 350px;
+}
+
+.course-logos img {
+    width: 200px;
+    height: 200px;
+}
+.course-logos{
+    background-color: rgba(180, 180, 180, 0.359);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.red {
+    width: 50%;
+    height: 400px;
+    position: relative;
+}
+
+
+.red img {
+    width: 150px;
+    height: 150px;
+}
+
+.red-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+    padding: 20px;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+}
+.red #js {
+    position: absolute;
+    top: 5%;
+    left: 15%;
+}
+
+.red #figma {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: rotateZ(-20deg);
+}
+
+.red #angular {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: rotateZ(20deg);
+}
+
+.red #python {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}
+
+.red #testing {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+}
+
+.explore-course {
+    background-color: rgb(118, 63, 199);
+    width: 320px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: 0px 0.5px 1px 1px black,
+        1px 2px 2px 2px black;
+    border: none;
+    cursor: pointer;
+    padding: 0.4rem 1.8rem;
+    border-radius: 20px;
+}
+
+.internship-display {
+    margin-top: 2rem;
+    padding: 0 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    overflow: hidden;
+}
+
+.internship-content h1 {
+    font-size: 2.5rem;
+}
+
+.internship-content span {
+    color: green;
+}
+
+.salem-institute {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.salem-institute p {
+    width: 800px;
+    text-align: justify;
+}
+
+.start-internship {
+    background-color: rgb(118, 63, 199);
+    width: 450px;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0px 0.5px 1px 1px black,
+        1px 2px 2px 2px black;
+    border: none;
+    cursor: pointer;
+    padding: 0.4rem 1.8rem;
+    border-radius: 20px;
+}
+
+.comparison .grid .flex {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    flex-wrap: wrap;
+    width: 30%;
+}
+
+.comparison .grid .flex h4 {
+    text-transform: none;
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.comparison .grid p {
+    font-weight: 700;
+    font-size: 5rem;
+    text-shadow: 1px 1px 1px #ffee80, 1px 2px 1px #ffee80,
+        1px 3px 1px #ffee80, 1px 4px 1px #ffee80,
+        1px 6px 6px rgba(16, 16, 16, 0.4);
+    text-transform: none;
+}
+
+.comparison .grid img {
+    width: 500px;
+    height: 500px;
+}
+
+.exchange .eximg img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.comparison {
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+}
+
+.comparison .grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.exchange {
+    padding: 2rem 5%;
+}
+
+.carousel {
+    background-color: blue;
+    width: 10%;
+}
+
+.slick-slider {
+    width: 60%;
+    margin: auto;
+}
+
+.changediv li {
+    display: none;
+}
+
+.slick-list {
+    background-color: red;
+}
+
+.slick-dots {
+    background-color: red;
+}
+
+.slick-next.slick-arrow::before {
+    display: none;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 900px;
+    gap: 2rem;
+}
+
+.slide {
+    display: flex;
+    flex-direction: row;
+}
+
+.slide img {
+    width: 400px;
+    height: 440px;
+}
+
+.slides {
+    padding-left: 12%;
+    display: flex;
+    align-items: center;
+}
+
+.dots {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: red;
+}
+
+.dots h4 {
+    font-weight: 700;
+    font-size: 3rem;
+    text-shadow: 1px 1px 1px #ffee80, 1px 2px 1px #ffee80,
+        1px 3px 1px #ffee80, 1px 4px 1px #ffee80,
+        1px 6px 6px rgba(16, 16, 16, 0.4);
+    text-transform: none;
+}
+
+.dots .flex span {
+    font-weight: bolder;
+    font-size: 2rem;
+    text-align: left;
+    color: #130f40;
+    text-transform: none;
+}
+
+.dots p {
+    font-size: 1.5rem;
+    text-transform: none;
+    text-align: justify;
+}
+
+.dots .flex {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.dots .flex .flexgap {
+    width: 475px;
+}
+
+.dots .flex a {
+    color: #228B22;
+    font-size: 2rem;
+}
+
+.dots .flex a:hover {
+    color: #228B22;
+    cursor: pointer;
+}
+
+.dots .flex i {
+    color: #228B22;
+}
+
+.changediv {
+    display: none;
+    margin-top: -540px;
+}
+
+.changediv li {
+    color: white;
+    margin: 12rem;
+    margin-left: 550px;
+}
+
+.slick-vertical .changediv li #slick-slide-control00 {
+    background-color: red;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .splash-screen {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .splash-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .splash-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .book-splash .book,
+    .target-splash .book,
+    .cloud-splash .book {
+        width: 50%;
+        height: auto;
+    }
+
+    .learners-connect {
+        padding: 1rem;
+    }
+
+    .vision-mission .about {
+        padding: 0 2rem;
+    }
+
+    .vision-mission .content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .course-display {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .course-logos img {
+        width: 100px;
+        height: 100px;
+    }
+
+        .red-content {
+            width: 90%;
+        }
+    .internship-display {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 2rem;
+       
+        
+    }
+
+    .salem-institute p {
+        width: 100%;
+    }
+
+    .comparison .grid {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .comparison .grid img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .splash-content #elicit {
+        font-size: 1.5rem;
+    }
+    .bubble{
+        display: none;
+    }
+    .courses-offered{
+        text-align: center;
+    }
+    .internship-display img{
+        display: none;
+    }
+    .internship-display{
+        /* margin-top: -100px; */
+        text-align: center;
+    }
+    .splash-screen{
+        margin-top: 6rem;
+        flex-direction: column-reverse;
+        /* margin-top: 30rem;
+        position: relative; */
+    }
+
+        .splash-image{
+
+            display: none;
+        }
+    
+
+   .course-display{
+    /* width: 100%; */
+   }
+    .start-course,
+    .explore-course,
+    .start-internship {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .dots h4 {
+        font-size: 2rem;
+    }
+
+    .dots .flex span {
+        font-size: 1.5rem;
+    }
+
+    .dots p {
+        font-size: 1rem;
+    }
+
+    .dots .flex a {
+        font-size: 1.5rem;
+    }
+
+    .dots-effects img {
+        width: 30px;
+        height: 50px;
+    }
+
+    .book-splash .book,
+    .target-splash .book,
+    .cloud-splash .book {
+        width: 15%;
+        height: auto;
+    }
+    .book-splash {
+        top: 5rem;
+        /* width: 15; */
+    }
+    .cloud-splash{
+        width: 100%;
+        left: 10rem;
+        top: 4rem;
+        font-size: 14px;
+    }
+    .cloud-splash img{
+        display: none;
+    }
+    .rated-course{
+        width: 100%;
+    }
+    .rated-course .course-show{
+        width: 230px;
+    }
+    .rated-course .course-list{
+        width: 230px;
+        /* width: 100%; */
+    }
+    .red{
+        width: 250px;
+    }
+    .red img {
+        height: 70px;
+        width: auto;
+    }
+}

@@ -1,0 +1,916 @@
+*{
+   
+        margin: 0;
+        padding: 0;
+}
+
+.about-splash {
+    margin-top: 10%;
+     scrollbar-width: none;
+        overflow: hidden;
+
+}
+
+.about-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-heading h1 {
+    position: relative;
+    z-index: 1;
+}
+
+.about-heading h1::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: rgb(178, 147, 209);
+    clip-path: polygon(100% 98%, 100% 98%, 1% 99%, 10% 89%, 99% 73%);
+}
+
+/* .about-heading h1{
+  background-color: rebeccapurple;
+  clip-path: polygon(0% 99%, 33% 93%, 67% 89%, 100% 89%);
+} */
+.about-splash img {
+    width: 200px;
+    height: 200px;
+    mix-blend-mode: exclusion;
+}
+
+.about-component {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-content {
+    height: 70vh;
+    /* overflow-y: scroll; */
+}
+
+.about-content::-webkit-scrollbar {
+    background: transparent;
+    width: 0;
+}
+
+.about-gif {
+    position: sticky;
+    /* margin-top: 2rem; */
+    /* top: 20%; */
+    
+    right: 0;
+}
+
+.about-component::-webkit-scrollbar {
+    background: transparent;
+    width: 0;
+}
+
+.about-component {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 10rem 0 4rem;
+}
+
+.about-splash svg {
+    stroke-width: 2px;
+}
+
+.about-splash svg path {
+    stroke-dasharray: 910;
+    stroke-dashoffset: 500;
+    animation: rectangle 2s linear infinite;
+}
+
+@keyframes rectangle {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.settings {
+    position: relative;
+}
+
+.settings-two {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.notes-gif {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+}
+
+.web-gif {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+}
+
+.web-gif img {
+    width: 80px;
+    height: 80px;
+}
+
+.notes-gif img {
+    width: 80px;
+    height: 80px;
+    mix-blend-mode: color-burn;
+}
+
+.settings-two img {
+    width: 70px;
+    height: 70px;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.main-circle {
+    position: absolute;
+    top: -35%;
+    right: -35%;
+}
+
+.circle-rotate {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px dashed black;
+    position: relative;
+    animation: rotateball 5s linear infinite;
+}
+
+.inner-circle {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(119, 68, 171);
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(50%, -50%);
+    top: 50%;
+    right: 0;
+
+}
+
+@keyframes rotateball {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.about-para {
+    width: 80%;
+    text-align: justify;
+}
+
+.about-para q {
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: "Pacifico", cursive;
+}
+/* Vision and Mission */
+.vision-mission {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.vision-gif {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* Adds space between pie chart and main image */
+}
+
+.pie_chart {
+    position: absolute;
+    left: 15%;
+    top: -10px;
+    /* Adjust position to place it beside */
+}
+
+.pie_chart img {
+    height: 100px;
+    /* Adjust the size */
+    /* width: 50px; */
+    animation: rotate 3s infinite linear;
+    /* Added animation for 360 degree rotation */
+}
+/* .vision-gif .settings-two {
+    position: absolute;
+    top: 10%;
+} */
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.vision-component {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding: 2rem;
+    position: relative;
+    /* flex-wrap: wrap; */
+}
+
+.vision-content {
+    width: 80%;
+    text-align: justify;
+    padding: 1rem;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+.vision-para{
+    margin-bottom: 20px;
+
+}
+.vision-image img {
+    height: 100px;
+    /* width: 3px; */
+}
+
+.vision-image img {
+    height: 300px;
+    /* Main image size */
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* development*/
+
+.personality-development {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.personality-development sup {
+    color: green;
+}
+
+.personality-development h1 {
+    font-size: 2.5rem;
+}
+
+/* flowchart */
+.flow-chart {
+    width: 10px;
+    height: 800px;
+    background-color: rgb(104, 244, 104);
+    position: relative;
+    left: 49.7%;
+}
+
+.circle:nth-child(1) {
+    position: absolute;
+    top: 9.5%;
+    left: -100%;
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.circle:nth-child(2) {
+    position: absolute;
+    top: 35.5%;
+    left: -100%;
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.circle:nth-child(3) {
+    position: absolute;
+    top: 61.5%;
+    left: -100%;
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.circle:nth-child(4) {
+    position: absolute;
+    top: 87.5%;
+    left: -100%;
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.features-display {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.global-certified {
+    position: absolute;
+    left: 14%;
+    top: 0;
+    width: 500px;
+    text-align: justify;
+    padding: 1rem 2rem 1rem 2rem;
+    background-color: rgb(244, 244, 64);
+}
+
+.resume-crafting {
+    position: absolute;
+    left: 14%;
+    top: 26%;
+    width: 500px;
+    text-align: justify;
+    padding: 1rem 2rem 1rem 2rem;
+    background-color: rgb(238, 90, 90);
+    color: #fff;
+}
+
+.module-tasks {
+    position: absolute;
+    right: 14%;
+    top: 0;
+    width: 500px;
+    text-align: justify;
+    padding: 1rem 2rem 1rem 2rem;
+    background-color: rgb(114, 114, 244);
+    color: #fff;
+}
+
+.support {
+    position: absolute;
+    right: 14%;
+    top: 26%;
+    width: 500px;
+    text-align: justify;
+    padding: 1rem 2rem 1rem 2rem;
+    background-color: rgb(82, 184, 82);
+    color: #fff;
+}
+
+.mock-interview {
+    position: absolute;
+    right: 14%;
+    top: 78%;
+    width: 500px;
+    text-align: justify;
+    padding: 1rem 2rem 1rem 2rem;
+    background-color: rgb(82, 184, 82);
+    color: #fff;
+}
+
+.language-training {
+    position: absolute;
+    left: 14%;
+    top: 52%;
+    width: 500px;
+    text-align: justify;
+    padding: 1rem 2rem 1rem 2rem;
+    background-color: rgb(244, 244, 64);
+    color: black;
+}
+
+.communication-training {
+    position: absolute;
+    right: 14%;
+    top: 52%;
+    width: 500px;
+    text-align: justify;
+    padding: 1rem 2rem 1rem 2rem;
+    background-color: rgb(114, 114, 244);
+    color: #fff;
+}
+
+.personality-training {
+    position: absolute;
+    left: 14%;
+    top: 78%;
+    width: 500px;
+    text-align: justify;
+    padding: 1rem 2rem 1rem 2rem;
+    background-color: rgb(238, 90, 90);
+    color: #fff;
+}
+.global-certified,
+.resume-crafting,
+.module-tasks,
+.support,
+.mock-interview,
+.language-training,
+.communication-training,
+.personality-training{
+    height: 180px;
+}
+
+.triangle:nth-child(1) {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    left: 45.5%;
+    z-index: 1;
+    top: 8.5%;
+    border-style: solid;
+    border-width: 0 30px 50px 30px;
+    border-color: transparent transparent rgb(244, 244, 64) transparent;
+    transform: rotate(90deg);
+}
+
+.triangle:nth-child(2) {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    right: 45.5%;
+    z-index: 1;
+    top: 8.5%;
+    border-style: solid;
+    border-width: 0 30px 50px 30px;
+    border-color: transparent transparent rgb(114, 114, 244) transparent;
+    transform: rotate(-90deg);
+}
+
+.triangle:nth-child(3) {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    left: 45.5%;
+    z-index: 1;
+    top: 34.5%;
+    border-style: solid;
+    border-width: 0 30px 50px 30px;
+    border-color: transparent transparent rgb(238, 90, 90) transparent;
+    transform: rotate(90deg);
+}
+
+.triangle:nth-child(4) {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    right: 45.5%;
+    z-index: 1;
+    top: 34.5%;
+    border-style: solid;
+    border-width: 0 30px 50px 30px;
+    border-color: transparent transparent rgb(82, 184, 82) transparent;
+    transform: rotate(-90deg);
+}
+
+.triangle:nth-child(5) {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    right: 45.5%;
+    z-index: 1;
+    top: 60.5%;
+    border-style: solid;
+    border-width: 0 30px 50px 30px;
+    border-color: transparent transparent rgb(114, 114, 244) transparent;
+    transform: rotate(-90deg);
+}
+
+.triangle:nth-child(6) {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    left: 45.5%;
+    z-index: 1;
+    top: 60.5%;
+    border-style: solid;
+    border-width: 0 30px 50px 30px;
+    border-color: transparent transparent rgb(244, 244, 64) transparent;
+    transform: rotate(90deg);
+}
+
+.triangle:nth-child(7) {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    left: 45.5%;
+    z-index: 1;
+    top: 86.5%;
+    border-style: solid;
+    border-width: 0 30px 50px 30px;
+    border-color: transparent transparent rgb(238, 90, 90) transparent;
+    transform: rotate(90deg);
+}
+
+.triangle:nth-child(8) {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    right: 45.5%;
+    z-index: 1;
+    top: 86.5%;
+    border-style: solid;
+    border-width: 0 30px 50px 30px;
+    border-color: transparent transparent rgb(82, 184, 82) transparent;
+    transform: rotate(-90deg);
+}
+
+/* Expert Solutions */
+.expert-solutions {
+    text-align: center;
+    padding: 3rem 0;
+    overflow: hidden;
+}
+
+.solutions-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.solution-card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    background-color: #ffffff;
+    cursor: pointer;
+    /* Default background */
+}
+.ISO {
+    width: 100%;
+}
+
+.solution-card:hover {
+    transform: translateY(-10px);
+}
+
+.solution-card:nth-child(1):hover {
+    background-color: #f0f8ff;
+    /* Light blue for Teaching IT Technologies */
+}
+
+.solution-card:nth-child(2):hover {
+    background-color: #fff4e1;
+    /* Light orange for Software Solutions */
+}
+
+.solution-card:nth-child(3):hover {
+    background-color: #f3ffe3;
+    /* Light green for Comprehensive Training Programs */
+}
+
+.solution-card img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.solution-card h2 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.solution-card p {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+/* Feedback Section */
+.feedback-section {
+    background: #f9f9f9;
+    padding: 3rem 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.feedback-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.feedback-card {
+    width: 250px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.feedback-card p {
+    font-style: italic;
+}
+
+.feedback-card h3 {
+    margin-top: 1rem;
+    color: #333;
+}
+.image-gallery {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 20px auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.image-gallery h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.gallery-wrapper {
+    overflow: hidden;
+    /* Hide the overflow to ensure only visible content is shown */
+    width: 100%;
+    /* Adjust to your desired width */
+    position: relative;
+    white-space: nowrap;
+}
+
+.gallery-images {
+    display: flex;
+    /* Arrange images in a row */
+    animation: scroll 30s linear infinite;
+    /* Continuous scrolling animation */
+}
+
+.gallery-images img {
+    width: auto;
+    /* Maintain the aspect ratio of images */
+    height: 300px;
+    /* Adjust height as needed */
+    margin: 0 10px;
+    border-radius: 8px;
+    /* Optional styling */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+        /* Start position */
+    }
+
+    100% {
+        transform: translateX(-100%);
+        /* Move the entire width of the gallery */
+    }
+}
+
+/* Responsive styles for tablet view */
+@media (max-width: 850px){
+    .about-heading{
+        flex-direction: column;
+        align-items: center;
+        /* margin-top: 8rem; */
+        
+    }
+    .about-para{
+        justify-content: center;
+        align-items: center;
+    }
+.global-certified,
+    .resume-crafting,
+    .module-tasks,
+    .support,
+    .mock-interview,
+    .language-training,
+    .communication-training,
+    .personality-training {
+        position: static;
+        /* width: 00px; */
+        width: 90%;
+        margin-bottom: 1rem;
+        height:auto ;
+        
+
+    }
+    .circle , .flow-chart , .triangle{
+        display: none;
+    }
+    .personality-development{
+        position: relative;
+        
+    }
+    .features-display{
+        margin-left: 10%;
+    }
+        .about-component {
+        flex-direction: column;
+        padding: 1rem;
+        width: 100%;
+        padding-left: 10%;
+        
+    }
+
+    .about-content {
+        height: auto;
+        overflow-y: visible;
+    }
+
+    .about-gif {
+        position: static;
+        margin-top: 5rem;
+    }
+}
+@media (max-width: 768px) {
+    .about-component {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .about-content {
+        height: auto;
+        overflow-y: visible;
+    }
+
+    /* .about-gif {
+        position: static;
+        margin-top: 2rem;
+    } */
+
+    .vision-component {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .vision-content {
+        width: 100%;
+    }
+
+    .vision-image img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .features-display {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+    .global-certified,
+    .resume-crafting,
+    .module-tasks,
+    .support,
+    .mock-interview,
+    .language-training,
+    .communication-training,
+    .personality-training {
+        /* position: static;
+        width: 300px; */
+        /* width: 90%; */
+        /* margin-bottom: 1rem; */
+    }
+
+    .flow-chart {
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .circle {
+        position: static;
+    }
+
+    .triangle {
+        position: static;
+    }
+
+    .expert-solutions {
+        padding: 2rem 1rem;
+    }
+
+    .solutions-list {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .feedback-cards {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .gallery-images img {
+        height: 200px;
+    }
+}
+
+/* Responsive styles for mobile view */
+@media (max-width: 480px) {
+    .about-splash{
+        
+        margin-top: 7rem;
+    }
+
+    .personality-development div{
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; */
+        text-align: center;
+    }
+    .vision-component .pie_chart{
+        position: absolute;
+        /* right: 0; */
+        margin-left: 10rem;
+    }
+    
+    .circle , .triangle{
+        display: none;
+    }
+    .about-heading h1 {
+        font-size: 1rem;
+        
+    }
+
+         .about-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-para q {
+        font-size: 2rem;
+
+    }
+
+    .vision-content {
+        padding: 1rem 0.5rem;
+    }
+
+    .vision-image img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .global-certified,
+    .resume-crafting,
+    .module-tasks,
+    .support,
+    .mock-interview,
+    .language-training,
+    .communication-training,
+    .personality-training {
+        /* width: 100%; */
+        /* width: 300px; */
+    }
+
+    .solution-card {
+        width: 100%;
+    }
+
+    .feedback-card {
+        width: 100%;
+    }
+
+    .gallery-images img {
+        height: 150px;
+    }
+}

@@ -1,0 +1,22 @@
+<!-- Navbar component -->
+<div class="navbar">
+  <header #header>
+    <nav>
+      <div class="logo">
+        <a routerLink=""><img src="../../../assets/logo black.png" alt=""></a>
+      </div>
+      <button class="menu-button" (click)="toggleMenu()">&#9776;</button>
+      <!-- <div class="nav-top"> -->
+
+        <div class="navlinks" [class.active]="menuOpen">
+          <a routerLink="/course" routerLinkActive="active" [routerLinkActiveOptions]="{exact:false}">Courses</a>
+          <a routerLink="/internships" routerLinkActive="active">Internships</a>
+          <a routerLink="/projects" routerLinkActive="active">Projects</a>
+          <div class="signup-btn"  >
+            <button routerLink="/contact_us">Contact Us</button>
+          </div>
+        </div>
+      <!-- </div> -->
+    </nav>
+  </header>
+</div>

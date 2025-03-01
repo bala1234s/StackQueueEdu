@@ -1,0 +1,131 @@
+<body>
+    <div class="loading-overlay" *ngIf="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="syllabus-page">
+        <section>
+            <div class="enquire">
+                <div class="logo">
+                    <img src="../../../assets/logo black.png" alt="Logo" routerLink="/">
+                </div>
+                <div class="details">
+                    <button (click)="scrollToCourse()">View Details</button>
+                </div>
+                <div class="enquireForm">
+                    <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+                        <div>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" formControlName="name" placeholder="Enter your name">
+                        </div>
+                        <div>
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" formControlName="email" placeholder="Enter your email">
+                        </div>
+                        <div>
+                            <label for="location">City</label>
+                            <input type="text" id="location" formControlName="location" placeholder="Enter your city">
+                        </div>
+                        <div>
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" formControlName="phone" placeholder="Enter your phone number">
+                        </div>
+                        <div>
+                            <label for="duration">Internship Duration</label>
+                            <select id="duration" formControlName="duration" (change)="updateFees()">
+                                <option value="15 days">15 days</option>
+                                <option value="1 month">1 month</option>
+                                <option value="2 months">2 months</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div *ngIf="showOtherDuration">
+                            <label for="otherDuration">Specify Duration (months)</label>
+                            <input type="number" id="otherDuration" formControlName="otherDuration" (input)="updateFees()">
+                        </div>
+                        <div>
+                            <label for="fees">Fees</label>
+                            <input type="text" id="fees" [value]="calculatedFees" readonly>
+                        </div>
+                        <div>
+                            <button type="submit">
+                                <i class="fa-solid fa-rocket fa-beat"></i>&nbsp;&nbsp;Register Now
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+       <div class="syllabus-course" id="course-details" *ngIf="internship">
+            <div> 
+                <div class="back-page">
+                    <a routerLink="/internships"><i class="fa-solid fa-arrow-left"></i>&nbsp;Back</a>
+                </div>
+                <h1>{{ internship.internship_title }}</h1>
+                <h3>{{ internship.internship_intro }}</h3>
+            </div>
+            <div>
+                <h3><b>Duration</b></h3>
+                <p>{{ selectedDuration }}</p>
+            </div>
+            <div>
+                <h1>Enroll at Rs.{{ calculatedFees }}</h1>
+            </div>
+            <div class="course-details">
+                <div class="course-modules">
+                    <div>
+                        <h3><b>Certificate</b></h3>
+                        <p>with ISO Certifications</p>
+                    </div>
+                     <div class="separate"></div>
+                    <div>
+                        <h3>Access</h3>
+                        <p>{{ internship.internship_access }}</p>
+                    </div>
+                    <div class="separate"></div>
+                </div>
+                <div class="course-modules">
+                    <div>
+                        <h3>Mode</h3>
+                        <p>
+                            <span *ngFor="let mode of internship.internship_mode; let i = index">
+                                {{ mode.mode }}<span *ngIf="i < internship.internship_mode.length - 1">, </span>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="separate"></div>
+                </div>
+                <div>
+                    <h3>Languages</h3>
+                    <p>
+                        <span *ngFor="let lang of internship.internship_languages; let i = index">
+                            {{ lang.lang }}<span *ngIf="i < internship.internship_languages.length - 1">, </span>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="modules-main">
+                <div>
+                    <h2>Internship Outcomes</h2>
+                </div>
+                <div class="module-name" *ngFor="let outcome of internship.internship_outcomes">
+                    <div class="beginner-module">
+                        <i class="fa-solid fa-book"></i>
+                        <h4>{{ outcome.outcome }}</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="course-outcome">
+                <div>
+                    <h2>Internship Scope</h2>
+                </div>
+                <div *ngFor="let scope of internship.internship_scope">
+                    <ul class="outcomes">
+                        <li><i class="fa-solid fa-book"></i>&nbsp;{{ scope.point }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

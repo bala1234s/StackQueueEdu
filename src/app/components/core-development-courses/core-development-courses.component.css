@@ -1,0 +1,225 @@
+/*  */
+.course-content {
+    border: 1px solid blueviolet;
+        /* width: 90%; */
+        margin-top: 3rem;
+        border-radius: 20px;
+        padding: 3.5rem;
+        box-shadow: 0px 0px 10px blueviolet;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    /* padding: 20px; */
+}
+
+.course-card {
+    /* width: calc(33.33% - 20px); */
+    /* background: linear-gradient(135deg, #ffffff, #f0f4f9); */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 350px;
+    /* height: 600px; */
+    
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+/* .course-card-img{
+    height: 200px;
+    width: 00px;
+} */
+.course-card-img img {
+    width: 100%;
+    height: 200px;
+    object-fit:fit;
+    border-bottom: 2px solid #4e9afe;
+}
+
+.course-card-info {
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 0 0 12px 12px;
+}
+
+.course-card-info h4 {
+    font-size: 20px;
+    color: #4e9afe;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.course-card-time{
+    display: flex;
+    /* justify-content: space-around; */
+    gap: 1.5rem;
+    align-items: center;
+}
+.course-description {
+    font-size: 14px;
+    color: #5a5a5a;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.course-lectures,
+.course-learners,
+.course-price {
+    font-size: 14px;
+    color: #333333;
+}
+
+.course-btn {
+    display: block;
+    background: linear-gradient(90deg, #4e9afe, #66c4ff);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    border: none;
+    width: 100%;
+}
+
+.course-btn:hover {
+    background: linear-gradient(90deg, #66c4ff, #4e9afe);
+}
+
+@media (max-width: 768px) {
+    .course-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .course-card {
+        width: 300px;
+    }
+    .course-content{
+        padding: 1rem;
+    }
+}
+
+.course-details {
+    border-radius: 10px;
+    /* padding: 1.2rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 10px gray;
+    /* gap: 0.5rem; */
+    cursor: pointer;
+}
+
+.course-details:hover {
+    background-color: rgb(224, 255, 255);
+    transition: 300ms ease-in-out;
+    scale: 1.1;
+}
+
+.course-details div:nth-child(1) {
+    width: 100%;
+    height: 200px;
+}
+
+.course-details div:nth-child(1) img {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: 200px;
+}
+
+.course-details div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 1rem;
+}
+
+.course-details div:nth-child(2) img {
+    height: 200px;
+    width: 200px;
+}
+
+.course-details div:nth-child(2) p {
+    width: 300px;
+    text-align: center;
+}
+
+.course-details div:nth-child(3) {
+    padding: 1rem;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 120px;
+    height: 22px;
+    border-radius: 40px;
+    color: #5e4bef;
+    border: 2px solid;
+    position: relative;
+    margin-top: 10rem;
+    z-index: 2;
+}
+
+.loader::before {
+    content: "";
+    position: absolute;
+    margin: 2px;
+    width: 25%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    background: currentColor;
+    animation: l3 1s infinite linear;
+}
+
+@keyframes l3 {
+    50% {
+        left: 100%;
+        transform: translateX(calc(-100% - 4px))
+    }
+}
+
+.skeleton-card {
+    width: 350px;
+    height: 600px;
+    background: #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skeleton-card::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}

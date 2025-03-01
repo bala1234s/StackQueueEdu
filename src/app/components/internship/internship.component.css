@@ -1,0 +1,352 @@
+/* General Styles */
+:host {
+    --button-color: rgb(118, 63, 199);
+    --font-color: #fff;
+}
+
+/* Container Styles */
+.internship-container {
+    padding: 3rem;
+    /* background-color:;
+    color: white; */
+    animation: fadeIn 2s ease;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+    background-color: rgba(192, 254, 234, 0.678);
+    padding: 2rem;
+}
+
+.header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    /* color: ; */
+}
+
+.header p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    /* color: rgb(118, 63, 199); */
+}
+
+/* Search Bar */
+.search-bar {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search-input {
+    padding: 12px;
+    width: 75%;
+    max-width: 400px;
+    font-size: 18px;
+    border: 1px solid var(--button-color);
+
+    border-radius: 50px;
+    background-color: #fff;
+    color: black;
+    transition: border 0.3s;
+}
+
+.search-input:focus {
+    border-color: #ff6b6b;
+    outline: none;
+}
+
+/* Cards Section */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #eaeaea;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    
+}
+
+/* Card Styles */
+
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    overflow: hidden;
+    border: 1px solid rgb(118, 63, 199);
+    transition: transform 0.2s ease-in-out;
+    /* width: calc(33.333% - 16px); */
+    height: 40rem;
+    width: 400px;
+    /* Adjust the width as needed */
+    margin-bottom: 16px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px var(--button-color);
+}
+
+.card img {
+    /* width: 100%; */
+    /* height: auto; */
+    /* display: block; */
+}
+
+.card h2 {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: 16px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #333;
+    margin: 16px;
+}
+
+.card span {
+    font-weight: bold;
+}
+
+.card .status {
+    font-weight: 600;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+.card .paid {
+    background-color: #28a745;
+    color: white;
+    padding: 5px;
+}
+
+.card .free {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px;
+}
+
+.card .apply-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 30px;
+    background-color: var(--button-color);
+    color: white;
+    text-align: center;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    width: 80%;
+    /* margin-bottom: 10px; */
+}
+
+.card .apply-btn:hover {
+    background-color: rgb(160, 112, 232);
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 120px;
+    height: 22px;
+    border-radius: 40px;
+    color: #5e4bef;
+    border: 2px solid;
+    position: relative;
+    left: 45%;
+    /* right: 50%; */
+    /* margin-top: 10rem; */
+    z-index: 2;
+}
+
+.loader::before {
+    content: "";
+    position: absolute;
+    margin: 2px;
+    width: 25%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    background: currentColor;
+    animation: l3 1s infinite linear;
+}
+
+@keyframes l3 {
+    50% {
+        left: 100%;
+        transform: translateX(calc(-100% - 4px))
+    }
+}
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+.details {
+    display: none;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.course-content {
+    border: 1px solid blueviolet;
+    /* width: 90%; */
+    margin-top: 3rem;
+    border-radius: 20px;
+    padding: 3.5rem;
+    box-shadow: 0px 0px 10px blueviolet;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    /* padding: 20px; */
+}
+/* Skeleton Loading */
+.skeleton-card {
+    width: 350px;
+    height: 600px;
+    background: #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skeleton-card::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .search-input {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .internship-container {
+        padding: 1rem;
+        margin-top: 5rem;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .search-input {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+    }
+
+    .card h2 {
+        font-size: 1.1em;
+        margin: 8px;
+    }
+
+    .card p {
+        font-size: 0.9em;
+        margin: 8px;
+    }
+
+    .card .apply-btn {
+        width: 90%;
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}

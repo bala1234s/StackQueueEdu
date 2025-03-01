@@ -1,0 +1,87 @@
+<app-navbar></app-navbar>
+<body>
+  <div class="contact-page">
+     <div *ngIf="isLoading" class="loading-overlay">
+      <div class="spinner"></div>
+    </div>  
+
+    <!-- Contact Form Section -->
+    <section >
+      <div class="contact-container">
+
+
+        <div class="contactForm">
+          <form [formGroup]="contactForm" (ngSubmit)=" submitContactForm()">
+            <div>
+              <label for="name">Name</label>
+              <input type="text" id="name" formControlName="name" placeholder="Your Name" >
+            </div>
+            <div>
+              <label for="email">E-mail</label>
+              <input type="email" id="email" formControlName="email" placeholder="Your Email">
+            </div>
+            <div>
+              <label for="Phone Number">Phone Number</label>
+              <input type="text" id="number" formControlName="number" placeholder="Phone Number">
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" formControlName="message" rows="5" placeholder="Your Message"></textarea>
+            </div>
+            <div class="formButton">
+              <button type="submit">
+                <i class="fa-solid fa-paper-plane fa-beat"></i>&nbsp;&nbsp;Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Google Maps Embed -->
+        <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9218.999748978853!2d78.11943273088556!3d11.626177362303942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babef7d38562ed9%3A0xc1f200b0aa888c50!2sSTACK%20QUEUE%20Education!5e0!3m2!1sen!2sin!4v1727520802325!5m2!1sen!2sin"
+          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+       </div>
+      </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="contact-info">
+      <h2>Contact Us</h2>
+      <div class="info-container">
+        <div class="info-item">
+          <i class="fa-solid fa-map-marker-alt"></i>
+          <p>123 First Floor , STACK QUEUE EDUCATION , Sankari Main Road , Sandaipet , Kondalampatti , Salem - 636010 , Tamil Nadu. </p>
+        </div>
+        <div class="info-item">
+          <i class="fa-solid fa-phone"></i>
+          <p>+91 7305370425</p>
+        </div>
+        <div class="info-item">
+          <i class="fa-solid fa-envelope"></i>
+          <p >stackqueueeducation&#64;stackqueue.in</p>
+        </div>
+        <div class="social-media">
+          <a href="https://www.linkedin.com/company/stackqueue" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://twitter.com/stackqueueedu" target="_blank">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="https://www.facebook.com/stackqueueedu" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </div>
+      </div>
+
+
+    </section>
+
+  </div>
+
+</body>
+
+<app-footer></app-footer>
+

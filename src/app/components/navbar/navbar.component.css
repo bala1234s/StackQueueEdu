@@ -1,0 +1,154 @@
+:host {
+    --button-color: rgb(118, 63, 199);
+    --font-color: #fff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    margin-bottom: 6%;
+}
+
+header {
+    width: 100%;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background-color: var(--font-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 220px;
+    height: 80px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.signup-btn button {
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    background-color: var(--button-color);
+    color: var(--font-color);
+    font-weight: 500;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2rem;
+}
+.signup-btn {
+    display: block;
+}
+.navlinks {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navlinks a {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.navlinks a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2.5px;
+    background-color: rgb(118, 63, 199);
+    color: #ffff;
+    transition: width 0.3s ease-in-out;
+}
+
+.navlinks a:hover::before {
+    width: 100%;
+}
+
+.navlinks a.active {
+    color: #fff;
+}
+.nav-top {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    /* padding: 1rem 2rem 1rem 2rem; */
+}
+.active {
+    background-color: rgb(118, 63, 199);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .navlinks {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* .signup-btn{
+        display: none;
+    } */
+    .navlinks.active {
+        display: flex;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar{
+        width: 100%;
+    }
+    .navlinks {
+        background-color: white;
+        height: 100vh;
+        gap: 2rem;
+    }
+    .navlinks a{
+        /* border-bottom: 1px solid #9b4848; */
+        width: 100%;
+        text-align: center;
+    }
+    .nav-top{
+        flex-direction: column;
+    }
+        /* .signup-btn {
+            display: none;
+        } */
+
+    .logo img {
+        width: auto;
+        height: 60px;
+    }
+}

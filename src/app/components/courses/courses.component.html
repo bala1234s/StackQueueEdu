@@ -1,0 +1,17 @@
+<div>
+  <div>
+    <app-navbar></app-navbar>
+  </div>
+  <div class="nav-top">
+    <button class="category-button" (click)="toggleCategories()">Categories</button>
+    <div class="nav-courses" [class.active]="categoriesOpen">
+      <a routerLink="/course/core-development-courses" routerLinkActive="active">Career Based Courses</a>
+      <a routerLink="top-tech-courses" routerLinkActive="active">Trending Courses</a>
+      <a routerLink="next-gen-courses" routerLinkActive="active">Next-Gen Courses </a>
+      <a routerLink="stack-courses"  routerLinkActive="active">Stack Courses</a>
+    </div>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

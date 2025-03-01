@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+.nav-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 6rem;
+}
+
+.nav-courses {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    background-color: blueviolet;
+    border-radius: 10px;
+}
+
+.nav-courses a {
+    padding: 1rem 3rem 1rem 3rem;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+}
+
+a.active {
+    background-color: green;
+}
+
+.category-button {
+    display: none;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+/* .course-card-img{
+    height: 500px;
+} */
+
+@media (max-width: 768px) {
+    .nav-courses {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .nav-courses.active {
+        display: flex;
+    }
+
+    .category-button {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-top {
+        /* margin-top: 2rem; */
+    }
+
+    .nav-courses a {
+        padding: 0.5rem 1rem;
+    }
+}

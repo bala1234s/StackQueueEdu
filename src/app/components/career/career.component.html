@@ -1,0 +1,74 @@
+<body>
+    <div>
+        <app-navbar></app-navbar>
+    </div>
+    
+    <div class="career-page">
+        <section class="intro">
+            <h1>Join Our Team</h1>
+            <p>At Stack Queue, we’re not just a company; we’re a family. We’re looking for passionate individuals to join us in shaping the future of innovation and growth.</p>
+        </section>
+
+        <section class="culture">
+            <h2>Our Culture</h2>
+            <p>We foster an environment of creativity, inclusivity, and teamwork, where every voice is valued. Our mission is to innovate together while having fun along the way.</p>
+        </section>
+        
+        <section class="responsibilities">
+            <h2>Responsibilities</h2>
+            <ul>
+                <li>Contribute your expertise to impactful projects.</li>
+                <li>Work collaboratively across departments to achieve shared goals.</li>
+                <li>Uphold company values and continuously strive for excellence.</li>
+            </ul>
+        </section>
+
+        <section class="memories">
+            <h2>Memories</h2>
+            <p>We believe in creating moments that matter. From team outings to in-office celebrations, we cherish the bonds we build as colleagues and friends.</p>
+            <div class="photos-container">
+                <button class="nav-button" (click)="scrollLeft()">&lt;</button>
+                <div class="photos">
+                    <img
+                        *ngFor="let photo of photos"
+                        [src]="photo.src"
+                        [alt]="photo.alt"
+                        (click)="openModal(photo)"
+                    />
+                </div>
+                <button class="nav-button" (click)="scrollRight()">&gt;</button>
+            </div>
+
+            <!-- Modal Structure -->
+            <div class="modal" *ngIf="isModalOpen" (click)="closeModal()">
+                <span class="close" (click)="closeModal($event)">&times;</span>
+                <img class="modal-content" [src]="modalImage?.src" />
+                <div id="caption">{{ modalImage?.alt }}</div>
+            </div>
+        </section>
+
+        <section class="growth">
+            <h2>Employee Growth</h2>
+            <p>At Stack Queue, we’re committed to the growth and development of our employees. Here’s how we invest in you:</p>
+            <ul>
+                <li><strong>Training and Development Programs:</strong> Gain access to workshops, certifications, and courses tailored to your career goals.</li>
+                <li><strong>Mentorship Opportunities:</strong> Connect with seasoned professionals for personalized guidance and insights.</li>
+                <li><strong>Career Pathways:</strong> We help you plan your career progression with clear milestones and opportunities.</li>
+                <li><strong>Recognition Programs:</strong> Your hard work deserves acknowledgment. We celebrate your achievements through awards and incentives.</li>
+            </ul>
+        </section>
+
+        <section class="opportunities">
+            <h2>Current Opportunities</h2>
+            <p>We are always looking for talented individuals to join our team. Explore exciting roles across various departments:</p>
+            <ul>
+                <li>Software Development</li>
+                <li>Marketing and Communications</li>
+                <li>Customer Support</li>
+                <li>Human Resources</li>
+                <li>Project Management</li>
+            </ul>
+            <p>Don’t see a role that matches your skills? Send us your resume at <a href="mailto:stackqueueeducation@stackqueue.in">stackqueueeducation&#64;stackqueue.in</a>.</p>
+        </section>
+    </div>
+</body>

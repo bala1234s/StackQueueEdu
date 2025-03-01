@@ -1,0 +1,64 @@
+:host {
+    --font-color: rgb(118, 63, 199);
+    
+}
+
+.logo img {
+    max-width: 200px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    /* height: 100vh; */
+    background-color: #f4f4f4;
+    padding: 2rem;
+}
+
+.back-button button {
+    background-color: var(--font-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.refund-policy {
+    /* padding: 20px; */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.refund-policy h1,
+.refund-policy h2 {
+    color: var(--font-color);
+}
+
+.refund-policy h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.refund-policy h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.refund-policy p,
+.refund-policy ul {
+    margin-bottom: 15px;
+    color: #636363;
+}
+
+.refund-policy ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}

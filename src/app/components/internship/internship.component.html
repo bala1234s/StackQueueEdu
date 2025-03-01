@@ -1,0 +1,65 @@
+<!-- Internship Page -->
+
+<div>
+    <div>
+        <app-navbar></app-navbar>
+    </div>
+    <div>
+      <div class="internship-container">
+  <div class="header">
+    <h1>Explore Our <span style="color: green;">Internship</span> Opportunities</h1>
+    <p>Join us to kickstart your career and gain hands-on experience!</p>
+  </div>
+
+  <div class="search-bar">
+    <input 
+      type="text" 
+      placeholder="Search here" 
+      [(ngModel)]="searchTerm" 
+      class="search-input"
+      (input)="filterInternships()"
+    />
+  </div>
+
+  <div *ngIf="loading">
+    <div class="course-content">
+      <div *ngFor="let skeleton of skeletons" class="skeleton-card"></div>
+    </div>
+  </div>
+
+  <ng-container *ngIf="!loading">
+    <div class="cards">
+      <div class="card" *ngFor="let internship of filteredInternships">
+        <img src="{{ internship.internship_image }}" alt="{{ internship.internship_title }}">
+        <h2>{{ internship.internship_title }}</h2>
+        <p>
+          <span>Languages: 
+            <span *ngFor="let lang of internship.internship_languages; let i = index">
+              {{ lang.lang }}<span *ngIf="i < internship.internship_languages.length - 1">, </span>
+            </span>
+          </span>
+        </p>
+        <p>
+          <span *ngIf="internship.internship_month_fees != 0" class="paid">Paid - ₹{{ internship.internship_month_fees }} / Month</span>
+          <span *ngIf="internship.internship_month_fees == 0" class="free">Free</span>
+        </p>
+        <p>
+          <strong>Applicants:</strong> {{ internship.internship_applicants }}
+        </p>
+        <p>
+          <strong>Stipend:</strong>
+          <span *ngIf="internship.internship_stipend != 0">₹{{ internship.internship_stipend }}</span>
+          <span *ngIf="internship.internship_stipend == 0">No Stipend</span>
+        </p>
+        <a class="apply-btn" (click)="apply(internship)">Apply Now</a>
+      </div>
+    </div>
+  </ng-container>
+
+</div>
+
+    </div>
+    <div>
+        <app-footer></app-footer>
+    </div>
+</div>

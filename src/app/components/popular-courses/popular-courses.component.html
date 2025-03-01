@@ -1,0 +1,16 @@
+<div class="course-content">
+  
+  <div class="course-details"  *ngFor="let item of getCourses">
+    <div>
+      <img src="{{item.course_image}}" alt="c programming" title="STACK QUEUE EDUCATION | C programming">
+    </div>
+    <div class="course-loop">
+
+      <h4>{{item.course_name}}</h4>
+      <p>{{item.course_description}}</p>
+      <p>Rating 4.5 / 5</p>
+
+    </div>
+  </div>
+
+</div>

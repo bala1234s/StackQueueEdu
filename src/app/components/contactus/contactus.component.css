@@ -1,0 +1,237 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 2rem;
+}
+
+/* Container for Contact Page */
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    /* width: 50%; */
+}
+
+/* Logo Styling */
+.logo img {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+/* Contact Form Styling */
+.contact-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    gap: 2rem;
+    width: 100%;
+}
+
+.map {
+    margin-top: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+
+.contactForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.contactForm label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contactForm input[type="text"],
+.contactForm input[type="email"],
+.contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0px 2px 5px rgba(118, 63, 199, 0.3);
+
+}
+
+.contactForm input[type="text"]:focus,
+.contactForm input[type="email"]:focus,
+.contactForm textarea:focus {
+    border: 1px solid rgb(118, 63, 199);
+    outline: none;
+}
+
+.contactForm {
+    width: 100%;
+}
+
+.contactForm textarea {
+    resize: none;
+}
+
+.formButton {
+    display: flex;
+    justify-content: center;
+}
+
+.contactForm button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: rgb(118, 63, 199);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+.contactForm button:hover {
+    background-color: rgb(67, 8, 154);
+}
+
+.contact-info {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #555;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: rgb(118, 63, 199);
+}
+
+.social-media {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-media a {
+    color: rgb(118, 63, 199);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: rgb(67, 8, 154);
+}
+
+
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 8px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Google Maps Styling */
+
+/* Responsive Design */
+@media (max-width: 850px) {
+
+    .contact-container,
+    .contact-info {
+        padding: 1rem;
+    }
+
+    .social-media a {
+        font-size: 1.2rem;
+    }
+    section{
+        margin-top: 3rem;
+    }
+}
+@media (max-width: 768px){
+    /* .contact-page{
+        padding: 1rem;
+    } */
+    .contact-container{
+        flex-direction: column;
+    }
+
+    /* .map{
+        margin-top: 1rem;
+    }
+    .contact-info{
+        margin-top: 1rem;
+    } */
+}
+@media (max-width: 480px) {
+    .contact-container{
+        /* width: 400px; */
+        padding: 10px;
+    }
+    .info-item {
+        width: 300px;
+    }
+    .info-item p{
+        width: 100%;
+    }
+}
